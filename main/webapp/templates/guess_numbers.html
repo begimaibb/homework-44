@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Create</title>
 </head>
 <body>
 
+<h1>Create Operation</h1>
+
+<form action="/" method="post">
+    {% csrf_token %}
+    <label>Guess 4 numbers. Enter them separated with spaces:</label><br/>
+    <br/>
+    <label>
+        <input type="text" name="numbers"/>
+    </label><input type="submit" value="Send"/><br/>
+
+</form>
+
+    <p>
+            {{ response }}
+    </p>
+
+    <a href="history.html"> History</a>
 </body>
 </html>
